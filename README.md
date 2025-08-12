@@ -1,39 +1,100 @@
-# Marketing_Analysis
-Problem Scenario: ‘Marketing mix’ is a popular concept used in implementing marketing strategies. A marketing mix includes multiple areas of focus as part of a comprehensive marketing plan. This all revolves around the four Ps of marketing - product, price, place, and promotion.
+# 📊 Marketing Analysis
 
-Problem Objective: As a data scientist, you should perform exploratory data analysis and hypothesis testing. The goal is to gain a better understanding of the various factors that contribute to customer acquisition.
+## 📝 Problem Scenario
+**Marketing mix** is a popular concept used in implementing marketing strategies.  
+It revolves around the **four Ps** of marketing:
+1. **Product**
+2. **Price**
+3. **Place**
+4. **Promotion**
 
-Data Description:
-The variables birth-year, education, income, and so on are related to the first 'P' or 'People' in the tabular data provided to the user. The amount spent on wine, fruits, gold, etc., is related to ‘Product’. The information pertinent to sales channels, like websites, stores, etc., is related to ‘Place’, and the fields which talk about promotions and results of different campaigns are related to ‘Promotion’.
+---
 
-Steps to Perform:
+## 🎯 Problem Objective
+As a **data scientist**, the goal is to:
+- Perform **exploratory data analysis (EDA)**.
+- Conduct **hypothesis testing**.
+- Gain a better understanding of the various factors contributing to **customer acquisition**.
 
-•	Once data is imported, investigate variables like Dt_Customer and Income, etc., and check if they are imported correctly.
+---
 
-•	Income values for a few customers are missing. Perform missing value imputation. Assume that the customers with similar education and marital status make the same yearly income, on average. You may have to clean the data before performing this. For data cleaning, look into the categories of education and marital status. 
+## 📂 Data Description
+The dataset includes variables mapped to the 4Ps:
 
-•	Create variables to populate the total number of children, age, and total spending. 
+| Category  | Example Variables |
+|-----------|------------------|
+| **People** | `birth-year`, `education`, `income`, etc. |
+| **Product** | Amount spent on `wine`, `fruits`, `gold`, etc. |
+| **Place** | Sales channel information: `web purchases`, `store purchases`, etc. |
+| **Promotion** | Fields describing campaign results and promotions. |
 
-Hint:   From the number of purchases through the three channels, people can derive the total purchases.
+---
 
-•	Create box plots and histograms to understand the distributions and outliers. Perform outlier treatment.
+## 🛠 Steps to Perform
 
-•	Use ordinal encoding and one hot encoding according to different types of categorical variables.
+### **1. Data Import & Verification**
+- Import dataset and inspect variables like `Dt_Customer` and `Income` to ensure correct data types.
 
-•	Create a heatmap to showcase the correlation between different pairs of variables.
+### **2. Missing Value Imputation**
+- Handle missing `Income` values:
+  - Assume customers with similar **education** and **marital status** have the same average yearly income.
+  - Clean category labels in `education` and `marital status` before imputation.
 
-•	Test the following hypotheses:
+### **3. Feature Engineering**
+- Create new variables:
+  - `Total_Children`
+  - `Age`
+  - `Total_Spending`  
+    *(Hint: Sum purchases through all three sales channels)*
 
-o	Older people are not as tech-savvy and probably prefer shopping in-store.
-o	Customers with kids probably have less time to visit a store and would prefer to shop online.
-o	Other distribution channels may cannibalize sales at the store.
-o	Does the US fare significantly better than the rest of the world in terms of total purchases?
+### **4. Outlier Treatment**
+- Create **box plots** and **histograms** to visualize distributions.
+- Apply outlier treatment where necessary.
 
+### **5. Encoding**
+- Use **ordinal encoding** for ordered categorical variables.
+- Use **one-hot encoding** for nominal categorical variables.
 
-•	Use appropriate visualization to help analyze the following:
+### **6. Correlation Analysis**
+- Create a **heatmap** to show correlation between variables.
 
-o	Which products are performing the best, and which are performing the least in terms of revenue?
-o	Is there any pattern between the age of customers and the last campaign acceptance rate?
-o	Which Country has the greatest number of customers who accepted the last campaign?
-o	Do you see any pattern in the no. of children at home and total spend?
-o	Education background of the customers who complained in the last 2 years.
+---
+
+## 📊 Hypotheses to Test
+1. Older people are less tech-savvy and prefer shopping **in-store**.
+2. Customers with kids prefer **online shopping** due to time constraints.
+3. Other sales channels may **cannibalize** in-store sales.
+4. The US performs significantly better than the rest of the world in total purchases.
+
+---
+
+## 📈 Additional Analysis & Visualizations
+
+- **Product Performance**  
+  Identify top and least performing products in terms of revenue.
+
+- **Age vs. Campaign Acceptance**  
+  Analyze patterns between customer age and last campaign acceptance rate.
+
+- **Geographic Insights**  
+  Which country has the highest number of customers accepting the last campaign?
+
+- **Children at Home vs. Spending**  
+  Explore the relationship between the number of children and total spending.
+
+- **Customer Complaints**  
+  Education background of customers who complained in the last 2 years.
+
+---
+
+## 📦 Technologies Used
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Matplotlib / Seaborn**
+- **Scikit-learn**
+
+---
+
+## 📜 License
+This project is open-sourced under the MIT License.
